@@ -8,12 +8,13 @@ const MySQLStore = require('express-mysql-session');
 
 const { database } = require('./keys');
 
-// inicializaciones
+// INICIALIZATIONS
+
 const app = express();
-// require('./lib/passport');
 
 
-// settings
+// SETTINGS
+
 app.set('port', process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs({
@@ -25,7 +26,8 @@ app.engine('.hbs', exphbs({
 }))
 app.set('view engine', '.hbs');
 
-// middlewares
+// MIDDLEWARES
+
 app.use(session({
     secret: 'superfuds-app',
     resave: false,
@@ -38,18 +40,22 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 
-//global variables
+//GLOBAL VARIABLES
+
 app.use((req, res, next) => {
     app.locals.success = req.flash('success');
     next();
 });
 
-//Routes
+//ROUTES
+
 app.use(require('./routes/index'));
-app.use(require('./routes/authentication'));
 app.use('/bodegas', require('./routes/bodegas'));
 
-//Public
+app.use(require('./routes/authentication'));
+
+//PUPLIC
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 //starting server
