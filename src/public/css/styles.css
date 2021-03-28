@@ -1,0 +1,22 @@
+body {
+    background-color: #C8FFBC;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.content__main {
+    min-height: 90vh;
+}
+
+/* HERO DE LANDING PAGE */
+.hero-image-home {
+    background-image: url('https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    height: 70vh;
+}
+
+/* TERMINA HERO DE LANDING PAGE */
