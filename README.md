@@ -12,11 +12,10 @@ El proyecto se realizó con node.js, express como framework y para templates han
 Vamos a instalar la aplicación en un entorno local, para esto se deben tener conocimientos basicos de la consola.
 
 ## Descargar proyecto
-Se debe descargar o clonar el proyecto en una carpeta local.  
-Despues de descargar y guardar el proyecto en su carpeta de preferencia, 
+Se debe descargar o clonar el proyecto, posteriormente debemos guardar el proyecto en un entorno local (computador) en la carpeta que se prefiera. 
 
 ## Configurar conexión a base de datos
-Ahora hay que editar el archivo "keys.js" para configurar la base de datos en la que se va a guardar la información. 
+Ahora accedemos al archivo "keys.js" por medio de un editor de texto o codigo y editamos el archivo "keys.js", para configurar la base de datos en la que se va a guardar la información. 
 En este se debe configurar los siguientes datos:
 - Host
 - User
