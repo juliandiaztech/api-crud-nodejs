@@ -1,25 +1,26 @@
-CREATE DATABASE test3;
+CREATE DATABASE test;
 
-USE test3;
+USE test;
 
-CREATE TABLE warehouse(
+CREATE TABLE warehouseapp(
     id INT(11) NOT NULL,
     name VARCHAR(16) NOT NULL,
     headquarters_number VARCHAR(60) NOT NULL,
     created_at timestamp NOT NULL DEFAULT current_timestamp,
     update_at TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
 
-ALTER TABLE warehouse
+ALTER TABLE warehouseapp
     ADD PRIMARY KEY (id);
 
-ALTER TABLE warehouse
+ALTER TABLE warehouseapp
     MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
 
 -- DESCRIBE   warehouse;
 
--- TABLE Warehouse_description
+-- TABLE Warehouseapp_description
 
-CREATE TABLE warehouse_description (
+CREATE TABLE warehouseapp_description (
     id INT(11) NOT NULL,
     warehouse_id INT(11),
     phone VARCHAR(150) NOT NULL,
@@ -30,10 +31,10 @@ CREATE TABLE warehouse_description (
     CONSTRAINT fk_warehouse FOREIGN KEY (warehouse_id) REFERENCES warehouse(id)
 );
 
-ALTER TABLE warehouse_description
+ALTER TABLE warehouseapp_description
     ADD PRIMARY KEY (id);
 
-ALTER TABLE warehouse_description
+ALTER TABLE warehouseapp_description
     MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
 
--- DESCRIBE warehouse_description;
+-- DESCRIBE warehouseapp_description;

@@ -16,16 +16,16 @@ router.post('/add', async (req, res) => {
         name,
         headquarters_number
     };
-    // console.log(newBodega);
-    await pool.query('INSERT INTO warehouse set ?', [newBodega]);
+    console.log(newBodega);
+    await pool.query('INSERT INTO warehouseapp set ?', [newBodega]);
     const { phone, city, address } = req.body;
     const newBodegaDescription = {
         phone,
         city,
         address
     };
-    // console.log(newBodegaDescription);
-    await pool.query('INSERT INTO warehouse_description set ?', [newBodegaDescription]);
+    console.log(newBodegaDescription);
+    await pool.query('INSERT INTO warehouseapp_description set ?', [newBodegaDescription]);
 
     req.flash('success', 'Bodega agregada con exito!')
     res.redirect('/bodegas');
@@ -33,9 +33,10 @@ router.post('/add', async (req, res) => {
 
 
 
+
 // READ
 router.get('/', async (req, res) => {
-    const bodegas = await pool.query('SELECT * from warehouse inner join warehouse_description on warehouse.id = warehouse_description.id;');
+    const bodegas = await pool.query('SELECT * from warehouseapp inner join warehouseapp_description on warehouseapp.id = warehouseapp_description.id;');
     res.render('bodegas/list', {bodegas} )
 });
 
@@ -45,8 +46,8 @@ router.get('/', async (req, res) => {
 
 router.get('/delete/:id', async (req, res) => {
     const { id } = req.params;
-    await pool.query('DELETE FROM warehouse WHERE ID = ?', [id]);
-    await pool.query('DELETE FROM warehouse_description WHERE ID = ?', [id]);
+    await pool.query('DELETE FROM warehouseapp WHERE ID = ?', [id]);
+    await pool.query('DELETE FROM warehouseapp_description WHERE ID = ?', [id]);
     req.flash('success', 'Bodega eliminada con exito!');
     res.redirect('/bodegas');
 });
@@ -57,7 +58,7 @@ router.get('/delete/:id', async (req, res) => {
 // UPDATE
 router.get('/edit/:id', async (req, res) => {
     const { id } = req.params;
-    const bodegas = await pool.query('SELECT * from warehouse inner join warehouse_description on warehouse.id = warehouse_description.id WHERE warehouse.id = ?', [id]);
+    const bodegas = await pool.query('SELECT * from warehouseapp inner join warehouseapp_description on warehouseapp.id = warehouseapp_description.id WHERE warehouseapp.id = ?', [id]);
     res.render('bodegas/edit', {bodega: bodegas[0]} )
 });
 
@@ -68,14 +69,14 @@ router.post('/edit/:id', async (req, res) => {
         name,
         headquarters_number
     };
-    await pool.query('UPDATE warehouse set ? WHERE id = ?', [newBodega, id]);
+    await pool.query('UPDATE warehouseapp set ? WHERE id = ?', [newBodega, id]);
     const { phone, city, address } = req.body;
     const newBodegaDescription = {
         phone,
         city,
         address
     };
-    await pool.query('UPDATE warehouse_description set ? WHERE id = ?', [newBodegaDescription, id]);
+    await pool.query('UPDATE warehouseapp_description set ? WHERE id = ?', [newBodegaDescription, id]);
     req.flash('success', 'Bodega actualizada con exito!');
     res.redirect('/bodegas');
 });
