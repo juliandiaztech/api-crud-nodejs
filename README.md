@@ -29,5 +29,9 @@ La aplicación se inicia desde la consola indicando el siguiente comando.
 npm run project
 ```
 
-Con esto se iniciará el servidor en "localhost" puerto 4000. Desde de el navegador se puede empezar a operar el CRUD.
-En la dirección localhost:4000/bodegas se puede observar todas las bodegas contenidas en la base de datos.
+Con esto se iniciará el servidor en "localhost" puerto 4000. Desde de el navegador se puede empezar a operar el CRUD. Por medio del navegar se ingresa a la siguiente dirección:
+```
+http://localhost:4000/
+```
+La cual conduce a la página de inicio de la aplicación. Por medio del menú de navegación, en el link "Bodegas" se puede acceder al sistema de administración de bodegas (CRUD).
+Desde este se gestiona las bodegas almacenadas en la base de datos anteriormente configurada.
