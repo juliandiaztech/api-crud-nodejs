@@ -15,7 +15,7 @@ ALTER TABLE warehouse
 ALTER TABLE warehouse
     MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
 
-DESCRIBE   warehouse;
+-- DESCRIBE   warehouse;
 
 -- TABLE Warehouse_description
 
@@ -36,4 +36,4 @@ ALTER TABLE warehouse_description
 ALTER TABLE warehouse_description
     MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
 
-DESCRIBE warehouse_description;
+-- DESCRIBE warehouse_description;
