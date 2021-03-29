@@ -7,17 +7,23 @@ El proyecto se realizó con node.js, express como framework y para templates han
 - Node.js
 - MYSQL
 
-## Intalar el proyecto
+## Instalar el proyecto
 Se debe descargar o clonar el proyecto en una carpeta local.  
 Despues de descargar y guardar el proyecto en su carpeta de preferencia, se debe editar el archivo "keys.js" para configurar la base de datos en la que se va a guardar la información.
 
 Si no se tiene una base de datos creada en MYSQL, se puede crear con el codigo contenido en la carpeta "database" archivo "db.sql" y ejecutandolo en MYSQL.
 
 ## Instalar dependencias necesarias
-En el archivo package.json están las dependencias necesarias para el funcionamiento de la aplicación.
+En el archivo package.json están las dependencias necesarias para el funcionamiento de la aplicación. Por medio de la consola ubicado en la carpeta donde se guardó la aplicación,
+se ejecuta el siguiente comanda
+
+```
+npm install package.json
+```
+
 
 #Iniciar la aplicación
-Se debe iniciar la aplicación desde la consola, ubicado en la carpeta en la cual se guardó la aplicación, con el siguiente comando:
+La aplicación se inicia desde la consola indicando el siguiente comando.
 
 ```
 npm run project
