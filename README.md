@@ -8,6 +8,9 @@ El proyecto se realizó con node.js, express como framework y para templates han
 - Node.js
 - MYSQL
 
+# Instalar la aplicación
+Vamos a instalar la aplicación en un entorno local, para esto se deben tener conocimientos basicos de la consola.
+
 ## Instalar el proyecto
 Se debe descargar o clonar el proyecto en una carpeta local.  
 Despues de descargar y guardar el proyecto en su carpeta de preferencia, se debe editar el archivo "keys.js" para configurar la base de datos en la que se va a guardar la información.
@@ -23,7 +26,7 @@ npm install package.json
 ```
 
 
-# Iniciar la aplicación
+## Iniciar la aplicación
 La aplicación se inicia desde la consola indicando el siguiente comando.
 
 ```
