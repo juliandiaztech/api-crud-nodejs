@@ -25,8 +25,10 @@ En este se debe configurar los siguientes datos:
 - Port
 
 ## Configurar base de datos
-Si no se tiene una base de datos creada en MYSQL, en la carpeta "database", hay un archivo "db.sql" donde se encuentra el codigo SQL para configurar la base de datos
-y creación de tablas en las cuales se van a guardar la información de las bodegas. 
+Si no se tiene una base de datos creada en MYSQL, en la carpeta "database", hay un archivo "db.sql" donde se encuentra los Query SQL para configurar la base de datos
+y creación de tablas, en las cuales se van a guardar la información de las bodegas. 
+
+Los Query SQL se deben ejecutar en MYSQL en la instancia a la cual nos conectamos en el paso anterior.
 
 ## Instalar dependencias necesarias
 En el archivo package.json están las dependencias necesarias para el funcionamiento de la aplicación. Por medio de la consola ubicado en la carpeta donde se guardó la aplicación,
