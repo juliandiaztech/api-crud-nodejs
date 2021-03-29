@@ -22,7 +22,7 @@ npm install package.json
 ```
 
 
-#Iniciar la aplicación
+# Iniciar la aplicación
 La aplicación se inicia desde la consola indicando el siguiente comando.
 
 ```
