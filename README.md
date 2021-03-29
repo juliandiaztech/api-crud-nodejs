@@ -14,7 +14,9 @@ En el archivo package.json están las dependencias necesarias para el funcionami
 #Iniciar la aplicación
 Se debe iniciar la aplicación desde la consola, ubicado en la carpeta en la cual se guardó la aplicación, con el siguiente comando:
 
-'''npm run project '''
+```
+npm run project
+```
 
 Con esto se iniciará el servidor en "localhost" puerto 4000. Desde de el navegador se puede empezar a operar el CRUD.
 En la dirección localhost:4000/bodegas se puede observar todas las bodegas contenidas en la base de datos.
