@@ -3,7 +3,7 @@ CRUD API REST - NODE.JS
 Crud sistema de bodegas conectado a base de datos mysql.
 El proyecto se realizó con node.js, express como framework y para templates handlebars.
 
-#Prerequisitos
+# Prerequisitos
 - Node.js
 - MYSQL
 
